@@ -1,5 +1,7 @@
 import React from "react";
 
-export const App = () => {
-  return <div>Portfolio Muhammad</div>;
+const App = (props) => {
+  return <div>Portfolio</div>;
 };
+
+export default App;
