@@ -24,7 +24,18 @@ A single-page, **vanilla** personal portfolio: responsive layout, dark/light the
 | Style  | Custom CSS (variables, glass UI)   |
 | Logic  | ES modules–style strict vanilla JS |
 
-No build step, no `node_modules` — open and run.
+Locally you only need the three files—**no install**. For **Vercel**, a tiny `npm run build` copies them into `dist/` so deployments do not use Vite (see `vercel.json`).
+
+## Deploying (Vercel)
+
+If you still see `vite: command not found`, the project was left on the old **Vite** preset. After pushing this repo:
+
+1. **Project → Settings → General → Build & Development**
+2. Set **Framework Preset** to **Other** (or leave blank so `vercel.json` wins).
+3. **Build Command** should be `npm run build` (or empty if you rely only on `vercel.json`).
+4. **Output Directory** should be `dist`.
+
+This repo includes `package.json` + `build-static.cjs` so the build only copies `index.html`, `style.css`, and `script.js` into `dist/`.
 
 ## Getting started
 

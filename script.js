@@ -1,6 +1,6 @@
 /* ============================================================
    PORTFOLIO SCRIPT — Vanilla JavaScript
-   Author : Alex Rivera
+   Author : Muhammad Yuter
    ============================================================ */
 
 'use strict';
@@ -27,30 +27,31 @@ const SKILLS_DATA = [
   {
     category: '🖥️ Frontend Core',
     skills: [
-      { name: 'HTML5',       icon: 'devicon-html5-plain colored',        level: 95 },
-      { name: 'CSS3',        icon: 'devicon-css3-plain colored',         level: 92 },
+      { name: 'HTML5',       icon: 'devicon-html5-plain colored',        level: 92 },
+      { name: 'CSS3',        icon: 'devicon-css3-plain colored',         level: 88 },
       { name: 'JavaScript',  icon: 'devicon-javascript-plain colored',   level: 90 },
-      { name: 'TypeScript',  icon: 'devicon-typescript-plain colored',   level: 82 },
+      { name: 'TypeScript',  icon: 'devicon-typescript-plain colored',   level: 78 },
     ],
   },
   {
     category: '⚛️ Frameworks & Libraries',
     skills: [
-      { name: 'React',       icon: 'devicon-react-original colored',     level: 88 },
-      { name: 'Vue.js',      icon: 'devicon-vuejs-plain colored',        level: 75 },
-      { name: 'Next.js',     icon: 'devicon-nextjs-original',            level: 78 },
-      { name: 'Tailwind',    icon: 'devicon-tailwindcss-plain colored',  level: 90 },
-      { name: 'GSAP',        icon: 'devicon-javascript-plain',           level: 70 },
+      { name: 'React',       icon: 'devicon-react-original colored',     level: 85 },
+      { name: 'Vue.js',      icon: 'devicon-vuejs-plain colored',        level: 70 },
+      { name: 'Next.js',     icon: 'devicon-nextjs-original',            level: 72 },
+      { name: 'Bootstrap',   icon: 'devicon-bootstrap-plain colored',    level: 80 },
+      { name: 'Tailwind',    icon: 'devicon-tailwindcss-plain colored',  level: 82 },
     ],
   },
   {
-    category: '🛠️ Tools & DevOps',
+    category: '🛠️ Skills & Tools',
     skills: [
       { name: 'Git',         icon: 'devicon-git-plain colored',          level: 88 },
-      { name: 'Figma',       icon: 'devicon-figma-plain colored',        level: 80 },
+      { name: 'GitHub',      icon: 'devicon-github-original',            level: 88 },
       { name: 'Node.js',     icon: 'devicon-nodejs-plain colored',       level: 72 },
-      { name: 'Docker',      icon: 'devicon-docker-plain colored',       level: 60 },
       { name: 'VS Code',     icon: 'devicon-vscode-plain colored',       level: 95 },
+      { name: 'Zustand',     icon: 'devicon-react-original colored',     level: 70 },
+      { name: 'Element Plus',icon: 'devicon-vuejs-plain colored',        level: 68 },
     ],
   },
 ];
@@ -129,32 +130,20 @@ const PROJECTS_DATA = [
  */
 const EXPERIENCE_DATA = [
   {
-    period: 'Jan 2023 — Present',
-    role: 'Senior Frontend Developer',
-    company: 'Vercel Inc. · San Francisco, CA',
-    description: 'Lead frontend architecture for enterprise dashboard products serving 50k+ users. Spearheaded the migration to Next.js 14 with App Router, achieving a 40% improvement in Core Web Vitals scores. Mentored a team of 4 junior developers.',
-    tags: ['Next.js', 'TypeScript', 'Vercel Edge', 'Design Systems'],
+    period: 'Mar 2025 — Dec 2025',
+    role: 'Developer',
+    company: 'Mars IT · Tashkent, Uzbekistan',
+    description:
+      'Full-time development at Mars IT: building and maintaining software with a focus on delivery, code quality, and collaboration. Daily workflows include Cursor, Claude Code, and practical iteration — shipping features end-to-end.',
+    tags: ['Mars IT', 'Cursor', 'Claude Code', 'Teamwork'],
   },
   {
-    period: 'Mar 2021 — Dec 2022',
-    role: 'Frontend Developer',
-    company: 'Stripe Inc. · Remote',
-    description: 'Built and maintained the Stripe Dashboard UI components used by millions of businesses worldwide. Contributed to the Stripe Elements library, improving developer experience and accessibility compliance across 20+ components.',
-    tags: ['React', 'TypeScript', 'WCAG 2.1', 'Storybook'],
-  },
-  {
-    period: 'Jun 2019 — Feb 2021',
-    role: 'UI Developer',
-    company: 'Figma Inc. · San Francisco, CA',
-    description: 'Developed interactive prototyping features and contributed to Figma\'s web renderer. Worked closely with the design team to implement pixel-perfect UI at scale. Improved canvas rendering performance by 25% through WebGL optimisations.',
-    tags: ['WebGL', 'Canvas API', 'React', 'Rust WASM'],
-  },
-  {
-    period: 'Aug 2018 — May 2019',
-    role: 'Junior Web Developer',
-    company: 'Freelance · San Francisco, CA',
-    description: 'Designed and developed websites for 15+ clients across various industries. Specialised in responsive design, performance optimisation, and SEO. Built reusable component libraries that reduced project delivery time by 30%.',
-    tags: ['HTML5', 'CSS3', 'JavaScript', 'WordPress'],
+    period: 'Mar 2024 — Feb 2025',
+    role: 'Freelance Developer',
+    company: 'Freelance · Remote',
+    description:
+      'One year of freelance work before Mars IT: taking projects from requirements to deployment, communicating with clients, and prioritising maintainable solutions over unnecessary complexity.',
+    tags: ['Freelance', 'Remote', 'JavaScript', 'Web'],
   },
 ];
 
@@ -245,9 +234,9 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   const el      = $('#typedText');
   const phrases = [
     'Frontend Developer',
-    'UI/UX Enthusiast',
     'Performance Nerd',
-    'Open-Source Lover',
+    'Cursor Power User',
+    'Ships Real Products',
     'Creative Coder',
   ];
 

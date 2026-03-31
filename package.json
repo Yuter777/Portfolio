@@ -1,0 +1,7 @@
+{
+  "name": "portfolio-static",
+  "private": true,
+  "scripts": {
+    "build": "node build-static.cjs"
+  }
+}
