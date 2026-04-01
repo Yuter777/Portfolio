@@ -1,0 +1,70 @@
+<section id="contact" class="contact-section relative z-[1] py-20 md:py-28 lg:py-36" aria-label="Contact">
+  <div class="mx-auto w-full max-w-[1200px] px-4 md:px-8">
+    <div class="fade-up mb-14 text-center">
+      <p class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-primary)]">Say Hello</p>
+      <h2 class="bg-gradient-to-br from-[var(--text-primary)] via-[var(--text-primary)] to-[var(--accent-secondary)] bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">Get In Touch</h2>
+    </div>
+
+    <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.3fr]">
+      <div class="contact-info fade-up">
+        <p class="mb-8 text-base leading-8 text-[var(--text-secondary)]">
+          Have a project in mind, a question, or just want to say hi?
+          My inbox is always open.
+        </p>
+
+        <div class="mb-8 flex flex-col gap-3">
+          <a href="mailto:muhammad06tt@gmail.com" class="group flex items-center gap-4 rounded-[18px] px-4 py-3 transition hover:translate-x-1.5 glass">
+            <span class="shrink-0 text-xl">✉️</span>
+            <div><strong class="block text-sm text-[var(--text-primary)]">Email</strong><span class="text-xs text-[var(--text-muted)]">muhammad06tt@gmail.com</span></div>
+          </a>
+          <a href="tel:+998946048091" class="group flex items-center gap-4 rounded-[18px] px-4 py-3 transition hover:translate-x-1.5 glass">
+            <span class="shrink-0 text-xl">📞</span>
+            <div><strong class="block text-sm text-[var(--text-primary)]">Phone</strong><span class="text-xs text-[var(--text-muted)]">+998 94 604 80 91</span></div>
+          </a>
+          <div class="flex items-center gap-4 rounded-[18px] px-4 py-3 glass">
+            <span class="shrink-0 text-xl">📍</span>
+            <div><strong class="block text-sm text-[var(--text-primary)]">Location</strong><span class="text-xs text-[var(--text-muted)]">Tashkent, Uzbekistan</span></div>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3" aria-label="Social media links">
+          <a href="https://www.instagram.com/muhammad_yuter/" target="_blank" rel="noopener noreferrer" class="flex h-11 w-11 items-center justify-center rounded-[10px] text-[var(--text-secondary)] transition hover:-translate-y-0.5 hover:text-[var(--accent-primary)] hover:shadow-[0_6px_20px_var(--accent-glow)] glass" aria-label="Instagram">IG</a>
+          <a href="https://t.me/muhammadyuter" target="_blank" rel="noopener noreferrer" class="flex h-11 w-11 items-center justify-center rounded-[10px] text-[var(--text-secondary)] transition hover:-translate-y-0.5 hover:text-[var(--accent-primary)] hover:shadow-[0_6px_20px_var(--accent-glow)] glass" aria-label="Telegram">TG</a>
+          <a href="https://www.linkedin.com/in/muhammad-tursunxoayev-a00a3a28a/" target="_blank" rel="noopener noreferrer" class="flex h-11 w-11 items-center justify-center rounded-[10px] text-[var(--text-secondary)] transition hover:-translate-y-0.5 hover:text-[var(--accent-primary)] hover:shadow-[0_6px_20px_var(--accent-glow)] glass" aria-label="LinkedIn">IN</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap fade-up delay-1">
+        <form class="glass flex flex-col gap-5 rounded-[28px] p-8" id="contactForm" novalidate aria-label="Contact form">
+          <div class="form-group flex flex-col gap-1.5">
+            <label for="nameInput" class="text-[0.82rem] font-semibold tracking-[0.04em] text-[var(--text-secondary)]">Full Name</label>
+            <input class="w-full resize-y rounded-[10px] border border-[var(--input-border)] bg-[var(--input-bg)] px-4 py-3 text-[0.92rem] text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)] focus:shadow-[0_0_0_3px_var(--input-focus)]" type="text" id="nameInput" name="name" placeholder="John Doe" autocomplete="name" required aria-required="true" />
+            <span class="min-h-4 text-xs text-[#ff4e6a]" aria-live="polite" id="nameError"></span>
+          </div>
+          <div class="form-group flex flex-col gap-1.5">
+            <label for="emailInput" class="text-[0.82rem] font-semibold tracking-[0.04em] text-[var(--text-secondary)]">Email Address</label>
+            <input class="w-full resize-y rounded-[10px] border border-[var(--input-border)] bg-[var(--input-bg)] px-4 py-3 text-[0.92rem] text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)] focus:shadow-[0_0_0_3px_var(--input-focus)]" type="email" id="emailInput" name="email" placeholder="john@example.com" autocomplete="email" required aria-required="true" />
+            <span class="min-h-4 text-xs text-[#ff4e6a]" aria-live="polite" id="emailError"></span>
+          </div>
+          <div class="form-group flex flex-col gap-1.5">
+            <label for="subjectInput" class="text-[0.82rem] font-semibold tracking-[0.04em] text-[var(--text-secondary)]">Subject</label>
+            <input class="w-full resize-y rounded-[10px] border border-[var(--input-border)] bg-[var(--input-bg)] px-4 py-3 text-[0.92rem] text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)] focus:shadow-[0_0_0_3px_var(--input-focus)]" type="text" id="subjectInput" name="subject" placeholder="Project Inquiry" required aria-required="true" />
+            <span class="min-h-4 text-xs text-[#ff4e6a]" aria-live="polite" id="subjectError"></span>
+          </div>
+          <div class="form-group flex flex-col gap-1.5">
+            <label for="messageInput" class="text-[0.82rem] font-semibold tracking-[0.04em] text-[var(--text-secondary)]">Message</label>
+            <textarea class="w-full resize-y rounded-[10px] border border-[var(--input-border)] bg-[var(--input-bg)] px-4 py-3 text-[0.92rem] text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)] focus:shadow-[0_0_0_3px_var(--input-focus)]" id="messageInput" name="message" rows="5" placeholder="Tell me about your project..." required aria-required="true"></textarea>
+            <span class="min-h-4 text-xs text-[#ff4e6a]" aria-live="polite" id="messageError"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+            <span class="btn-text">Send Message ✨</span>
+            <span class="btn-loading" hidden aria-hidden="true">Sending...</span>
+          </button>
+          <div class="rounded-[18px] border border-[rgba(0,229,100,0.25)] bg-[rgba(0,229,100,0.12)] p-4 text-center text-sm font-semibold text-[#00e564]" id="formSuccess" hidden aria-live="polite" role="status">
+            Message sent! I'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

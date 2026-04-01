@@ -4,19 +4,6 @@
    ============================================================ */
 
 'use strict';
-
-/* =====================================================================
-   ██████╗  █████╗ ████████╗ █████╗
-   ██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗
-   ██║  ██║███████║   ██║   ███████║
-   ██║  ██║██╔══██║   ██║   ██╔══██║
-   ██████╔╝██║  ██║   ██║   ██║  ██║
-   ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝
-   =====================================================================
-   Edit the objects below to customise Skills, Projects, and Experience.
-   No other changes needed!
-   ===================================================================== */
-
 /**
  * SKILLS DATA
  * Each category has a title and an array of skills.
@@ -63,65 +50,43 @@ const SKILLS_DATA = [
  * liveUrl / codeUrl: links for buttons (set null to hide)
  */
 const PROJECTS_DATA = [
-  {
-    title: 'Lumina Design System',
-    desc: 'A comprehensive component library with 60+ accessible UI components, dark mode support, and full documentation site.',
-    emoji: '🌟',
-    gradient: 'linear-gradient(135deg, #7c6bff 0%, #00e5ff 100%)',
-    stack: ['React', 'TypeScript', 'Storybook', 'CSS-in-JS'],
-    category: 'ui',
-    liveUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
-  },
-  {
-    title: 'Pulse Analytics Dashboard',
-    desc: 'Real-time analytics platform with interactive charts, customisable widgets, and live WebSocket data streams.',
-    emoji: '📊',
-    gradient: 'linear-gradient(135deg, #ff6ec7 0%, #7c6bff 100%)',
-    stack: ['Vue.js', 'D3.js', 'WebSocket', 'Vite'],
-    category: 'web',
-    liveUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
-  },
-  {
-    title: 'Momentum Task Manager',
-    desc: 'Productivity app featuring Kanban boards, drag-and-drop task management, and AI-powered priority suggestions.',
-    emoji: '✅',
-    gradient: 'linear-gradient(135deg, #00e5ff 0%, #00ff88 100%)',
-    stack: ['React', 'TypeScript', 'Zustand', 'Framer Motion'],
-    category: 'web',
-    liveUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
-  },
-  {
-    title: 'CSS Gradient Forge',
-    desc: 'Visual tool for generating complex CSS gradients with live preview, export functionality, and animation support.',
-    emoji: '🎨',
-    gradient: 'linear-gradient(135deg, #ff9a00 0%, #ff6ec7 100%)',
-    stack: ['Vanilla JS', 'CSS3', 'Canvas API'],
-    category: 'tool',
-    liveUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
-  },
-  {
-    title: 'NovaBlog CMS',
-    desc: 'Headless CMS with a beautiful editorial interface, markdown editor, real-time collaboration, and SEO tooling.',
-    emoji: '📝',
-    gradient: 'linear-gradient(135deg, #7c6bff 0%, #ff6ec7 50%, #ff9a00 100%)',
-    stack: ['Next.js', 'Prisma', 'PostgreSQL', 'TailwindCSS'],
-    category: 'web',
-    liveUrl: 'https://example.com',
-    codeUrl: null,
-  },
-  {
-    title: 'Portfolio Generator',
-    desc: 'No-code builder that lets developers create stunning portfolio sites in minutes with customisable templates.',
+    {
+    title: 'Mars IT CRM (Management Platform)',
+    desc: 'Mars IT CRM is the company’s core management and monitoring platform for students, employees, and project coordination.',
     emoji: '🚀',
-    gradient: 'linear-gradient(135deg, #00ff88 0%, #00e5ff 100%)',
-    stack: ['React', 'Node.js', 'MongoDB', 'Express'],
-    category: 'tool',
-    liveUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
+    gradient: 'linear-gradient(135deg, #7557fa 0%, #6284ff 100%)',
+    stack: [
+      'Vue 3', 'Element Plus', 'Chart.js', 'Socket.io', 'TailwindCSS',  'xlsx', 'v-calendar', 'vue-draggable-plus', 'i18n',
+    ],
+    category: 'web',
+    liveUrl: 'https://test.core.marsit.uz/',
+    codeUrl: 'https://github.com/matsituz/thesystem',
+    github: 'https://github.com/matsituz/thesystem',
+    note: 'Corporate management system for Mars IT. Links and usage are restricted for authorized users only; the external system is not publicly accessible.',
+  },
+  {
+    title: 'Alifshop (Clone)',
+    desc: "Alifshop savdo sayti kloni — Najot Ta'limda o'qiyotganimda ishlab chiqqanman. Asosiy e'tibor — real e-commerce UX va funksionallik. To‘liq responsiv va modern dizayn.",
+    emoji: '🛒',
+    gradient: 'linear-gradient(135deg, #ff6ec7 0%, #ff9a00 50%, #00e5ff 100%)',
+    stack: ['React', 'Redux Toolkit', 'TailwindCSS', 'Node.js', 'Swiper'],
+    category: 'web',
+    liveUrl: 'https://alifshop-nine.vercel.app/',
+    codeUrl: 'https://github.com/Yuter777/alifshop',
+  },
+  {
+    title: 'Mars IT LMS (O‘quvchilar uchun sayt)',
+    desc: "Mars IT LMS — bu o‘quvchilar va ustozlar uchun mo‘ljallangan o‘quv boshqaruv tizimi. Uzluksiz bilim olish, onlayn kundalik, uyga vazifa topshirish va monitoring. To‘liq zamonaviy va funksional platforma.",
+    emoji: '🎓',
+    gradient: 'linear-gradient(135deg, #38b6ff 0%, #1f4068 100%)',
+    stack: [
+      'Vue 3', 'Element Plus', 'FullCalendar', 'Axios', 'Sentry', 'V-Calendar'
+    ],
+    category: 'web',
+    liveUrl: 'https://test.space.marsit.uz/',
+    codeUrl: 'https://github.com/matsituz/mars-lms',
+    github: 'https://github.com/matsituz/mars-lms',
+    note: 'Mars IT uchun yaratilgan Learning Management System (LMS). Barcha asosiy funksiyalar: dars jadvali, topshiriqlar, monitoring va boshqa imkoniyatlar.'
   },
 ];
 
@@ -157,10 +122,42 @@ const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
 
+async function loadSectionIncludes() {
+  const targets = $$('[data-include]');
+  if (!targets.length) return;
+
+  await Promise.all(
+    targets.map(async (target) => {
+      const path = target.getAttribute('data-include');
+      if (!path) return;
+      try {
+        const res = await fetch(path);
+        if (!res.ok) throw new Error(`Failed to load ${path}`);
+        target.outerHTML = await res.text();
+      } catch (err) {
+        try {
+          const xhr = new XMLHttpRequest();
+          xhr.open('GET', path, false);
+          xhr.send(null);
+          if (xhr.status === 200 || xhr.status === 0) {
+            target.outerHTML = xhr.responseText;
+            return;
+          }
+          throw new Error(`XHR include failed: ${path}`);
+        } catch {
+          target.innerHTML = `<div class="container py-8 text-red-300">Could not load section: ${path}</div>`;
+          // Keep going so one failed partial does not break page init.
+          console.error(err);
+        }
+      }
+    })
+  );
+}
+
 /* =====================================================================
    1. THEME TOGGLE (Dark ↔ Light)
    ===================================================================== */
-(function initTheme() {
+function initTheme() {
   const html        = document.documentElement;
   const toggleBtn   = $('#themeToggle');
   const stored      = localStorage.getItem('theme');
@@ -176,13 +173,13 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     // Update particles colour
     initParticles();
   });
-})();
+}
 
 
 /* =====================================================================
    2. NAVBAR — scroll effect + active section highlight + mobile menu
    ===================================================================== */
-(function initNavbar() {
+function initNavbar() {
   const navbar     = $('.navbar');
   const hamburger  = $('#hamburger');
   const mobileMenu = $('#mobileMenu');
@@ -224,14 +221,15 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       mobileMenu.hidden = true;
     });
   });
-})();
+}
 
 
 /* =====================================================================
    3. TYPED TEXT ANIMATION
    ===================================================================== */
-(function initTypedText() {
+function initTypedText() {
   const el      = $('#typedText');
+  if (!el) return;
   const phrases = [
     'Frontend Developer',
     'Performance Nerd',
@@ -267,13 +265,13 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     setTimeout(type, isPaused ? 1800 : speed);
   }
   type();
-})();
+}
 
 
 /* =====================================================================
    4. SCROLL-TO-TOP BUTTON
    ===================================================================== */
-(function initScrollTop() {
+function initScrollTop() {
   const btn = $('#scrollTopBtn');
 
   window.addEventListener('scroll', () => {
@@ -283,13 +281,13 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-})();
+}
 
 
 /* =====================================================================
    5. SCROLL REVEAL (Intersection Observer)
    ===================================================================== */
-(function initScrollReveal() {
+function initScrollReveal() {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
@@ -314,13 +312,13 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
   // Will also observe dynamically rendered cards/items (called after render)
   window._revealObserver = observer;
-})();
+}
 
 
 /* =====================================================================
    6. SKILLS RENDERER
    ===================================================================== */
-(function renderSkills() {
+function renderSkills() {
   const container = $('#skillsContainer');
   if (!container) return;
 
@@ -329,14 +327,14 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   SKILLS_DATA.forEach(category => {
     html += `
       <div class="skill-category fade-up">
-        <h3 class="skill-category-title">${category.category}</h3>
-        <div class="skills-grid">
+        <h3 class="mb-5 flex items-center gap-3 font-['Syne'] text-base font-bold uppercase tracking-[0.12em] text-[var(--text-secondary)] after:h-px after:flex-1 after:bg-[var(--glass-border)]">${category.category}</h3>
+        <div class="grid grid-cols-[repeat(auto-fill,minmax(130px,1fr))] gap-4">
           ${category.skills.map(skill => `
-            <div class="skill-card glass" role="listitem" aria-label="${skill.name} — ${skill.level}% proficiency">
-              <i class="${skill.icon} skill-icon" aria-hidden="true"></i>
-              <span class="skill-name">${skill.name}</span>
-              <div class="skill-bar-wrap" role="progressbar" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100" aria-label="${skill.name} level">
-                <div class="skill-bar" data-level="${skill.level}" style="width:0%"></div>
+            <div class="skill-card glass flex cursor-default flex-col items-center gap-3 rounded-[18px] px-4 py-5 transition duration-200 hover:-translate-y-1 hover:shadow-[0_12px_40px_var(--accent-glow)]" role="listitem" aria-label="${skill.name} — ${skill.level}% proficiency">
+              <i class="${skill.icon} skill-icon text-[2.4rem] transition duration-200" aria-hidden="true"></i>
+              <span class="text-center text-xs font-semibold text-[var(--text-secondary)]">${skill.name}</span>
+              <div class="h-1 w-full overflow-hidden rounded-full bg-[var(--glass-bg)]" role="progressbar" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100" aria-label="${skill.name} level">
+                <div class="skill-bar h-full w-0 rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] shadow-[0_0_8px_var(--accent-glow)] transition-[width] duration-[1200ms]" data-level="${skill.level}" style="width:0%"></div>
               </div>
             </div>
           `).join('')}
@@ -350,13 +348,13 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   // Observe newly added elements
   $$('.skill-category').forEach(el => window._revealObserver.observe(el));
   $$('.skill-card').forEach(el => window._revealObserver.observe(el));
-})();
+}
 
 
 /* =====================================================================
    7. PROJECTS RENDERER + FILTER
    ===================================================================== */
-(function renderProjects() {
+function renderProjects() {
   const grid       = $('#projectsGrid');
   const filterBtns = $$('.filter-btn');
   if (!grid) return;
@@ -369,29 +367,29 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
       const isHidden = filter !== 'all' && project.category !== filter;
 
       const liveBtn = project.liveUrl
-        ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Live demo of ${project.title}">🔗 Live</a>`
+        ? `<a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] px-3.5 py-1.5 text-xs font-semibold text-[var(--text-secondary)] transition hover:border-[var(--accent-primary)] hover:text-[var(--accent-primary)] hover:shadow-[0_0_12px_var(--accent-glow)]" aria-label="Live demo of ${project.title}">🔗 Live</a>`
         : '';
       const codeBtn = project.codeUrl
-        ? `<a href="${project.codeUrl}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Source code of ${project.title}">⚡ Code</a>`
+        ? `<a href="${project.codeUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] px-3.5 py-1.5 text-xs font-semibold text-[var(--text-secondary)] transition hover:border-[var(--accent-primary)] hover:text-[var(--accent-primary)] hover:shadow-[0_0_12px_var(--accent-glow)]" aria-label="Source code of ${project.title}">⚡ Code</a>`
         : '';
 
       const card = document.createElement('article');
-      card.className = `project-card glass${isHidden ? ' hidden' : ''}`;
+      card.className = `project-card glass overflow-hidden rounded-[28px] transition duration-300 hover:-translate-y-2 hover:shadow-[0_20px_60px_var(--glass-shadow),0_0_30px_var(--accent-glow)]${isHidden ? ' hidden' : ''}`;
       card.style.transitionDelay = `${i * 0.08}s`;
       card.setAttribute('aria-label', project.title);
 
       card.innerHTML = `
-        <div class="project-thumb" style="background: ${project.gradient}">
-          <div class="project-thumb-placeholder" aria-hidden="true">${project.emoji}</div>
-          <span class="project-badge">${project.category}</span>
+        <div class="relative h-[200px] overflow-hidden" style="background: ${project.gradient}">
+          <div class="flex h-full w-full items-center justify-center text-5xl" aria-hidden="true">${project.emoji}</div>
+          <span class="absolute right-4 top-4 rounded-full bg-black/50 px-3 py-1 text-[0.7rem] font-bold uppercase tracking-[0.06em] text-white backdrop-blur">${project.category}</span>
         </div>
-        <div class="project-body">
-          <h3 class="project-title">${project.title}</h3>
-          <p class="project-desc">${project.desc}</p>
-          <div class="project-stack" aria-label="Technologies used">
-            ${project.stack.map(t => `<span class="stack-tag">${t}</span>`).join('')}
+        <div class="p-6">
+          <h3 class="mb-2 font-['Syne'] text-lg font-bold">${project.title}</h3>
+          <p class="mb-4 text-sm leading-relaxed text-[var(--text-secondary)]">${project.desc}</p>
+          <div class="mb-5 flex flex-wrap gap-2" aria-label="Technologies used">
+            ${project.stack.map(t => `<span class="rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] px-2.5 py-1 text-[0.72rem] font-semibold text-[var(--text-secondary)]">${t}</span>`).join('')}
           </div>
-          <div class="project-links">${liveBtn}${codeBtn}</div>
+          <div class="flex gap-3">${liveBtn}${codeBtn}</div>
         </div>
       `;
 
@@ -405,46 +403,64 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   renderCards();
 
   // Filter logic
+  const activeFilterClasses = [
+    'bg-gradient-to-br',
+    'from-[var(--accent-primary)]',
+    'to-[var(--accent-secondary)]',
+    'text-white',
+    'shadow-[0_4px_18px_var(--accent-glow)]',
+    'border-transparent',
+  ];
+  const inactiveFilterClasses = [
+    'bg-[var(--glass-bg)]',
+    'text-[var(--text-secondary)]',
+    'border-[var(--glass-border)]',
+  ];
+
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      filterBtns.forEach(b => {
+        b.classList.remove('active', ...activeFilterClasses);
+        b.classList.add(...inactiveFilterClasses);
+      });
+      btn.classList.add('active', ...activeFilterClasses);
+      btn.classList.remove(...inactiveFilterClasses);
       renderCards(btn.dataset.filter);
     });
   });
-})();
+}
 
 
 /* =====================================================================
    8. EXPERIENCE RENDERER
    ===================================================================== */
-(function renderExperience() {
+function renderExperience() {
   const timeline = $('#timeline');
   if (!timeline) return;
 
   timeline.innerHTML = EXPERIENCE_DATA.map((exp, i) => `
-    <div class="timeline-item" style="transition-delay:${i * 0.12}s">
-      <div class="timeline-dot" aria-hidden="true"></div>
-      <div class="timeline-card glass">
-        <p class="timeline-period">${exp.period}</p>
-        <h3 class="timeline-role">${exp.role}</h3>
-        <p class="timeline-company">${exp.company}</p>
-        <p class="timeline-desc">${exp.description}</p>
-        <div class="timeline-tags" aria-label="Skills used">
-          ${exp.tags.map(tag => `<span class="timeline-tag">${tag}</span>`).join('')}
+    <div class="relative pb-10 pl-14 last:pb-0" style="transition-delay:${i * 0.12}s">
+      <div class="absolute left-[10px] top-[6px] h-[22px] w-[22px] rounded-full border-[3px] border-[var(--bg-base)] bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] shadow-[0_0_15px_var(--accent-glow)]" aria-hidden="true"></div>
+      <div class="glass rounded-[18px] px-7 py-6 transition duration-200 hover:translate-x-1.5">
+        <p class="mb-1 text-xs font-semibold uppercase tracking-[0.1em] text-[var(--accent-primary)]">${exp.period}</p>
+        <h3 class="mb-1 font-['Syne'] text-[1.1rem] font-bold">${exp.role}</h3>
+        <p class="mb-3 text-sm text-[var(--text-secondary)]">${exp.company}</p>
+        <p class="mb-3 text-sm leading-7 text-[var(--text-secondary)]">${exp.description}</p>
+        <div class="flex flex-wrap gap-2" aria-label="Skills used">
+          ${exp.tags.map(tag => `<span class="rounded-full border border-[rgba(124,107,255,0.3)] bg-[var(--accent-glow)] px-2.5 py-1 text-[0.7rem] font-semibold text-[var(--accent-primary)]">${tag}</span>`).join('')}
         </div>
       </div>
     </div>
   `).join('');
 
-  $$('.timeline-item').forEach(el => window._revealObserver.observe(el));
-})();
+  $$('#timeline > div').forEach(el => window._revealObserver.observe(el));
+}
 
 
 /* =====================================================================
    9. CONTACT FORM — Validation + Simulated Submit
    ===================================================================== */
-(function initContactForm() {
+function initContactForm() {
   const form       = $('#contactForm');
   if (!form) return;
 
@@ -464,6 +480,8 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
     const error = $(`#${fieldId}Error`);
     const msg   = validators[fieldId](input.value);
     input.classList.toggle('error', !!msg);
+    input.classList.toggle('border-[#ff4e6a]', !!msg);
+    input.classList.toggle('shadow-[0_0_0_3px_rgba(255,78,106,0.2)]', !!msg);
     error.textContent = msg;
     return !msg;
   }
@@ -495,7 +513,9 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
     // Show success
     form.reset();
-    fields.forEach(f => $(`#${f}Input`).classList.remove('error'));
+    fields.forEach(f => {
+      $(`#${f}Input`).classList.remove('error', 'border-[#ff4e6a]', 'shadow-[0_0_0_3px_rgba(255,78,106,0.2)]');
+    });
     submitBtn.disabled = false;
     $('.btn-text', submitBtn).hidden = false;
     $('.btn-loading', submitBtn).hidden = true;
@@ -503,7 +523,7 @@ const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
     setTimeout(() => { successMsg.hidden = true; }, 5000);
   });
-})();
+}
 
 
 /* =====================================================================
@@ -597,37 +617,49 @@ function initParticles() {
   loop();
 }
 
-// Init particles on load and pause when tab hidden (perf)
-initParticles();
-document.addEventListener('visibilitychange', () => {
+function initSmoothScroll() {
+  $$('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const targetId = anchor.getAttribute('href').slice(1);
+      const target   = document.getElementById(targetId);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+}
+
+function initHeroReveal() {
+  $$('#hero .fade-up').forEach(el => {
+    setTimeout(() => el.classList.add('visible'), 100);
+  });
+}
+
+function initVisibilityPause() {
+  document.addEventListener('visibilitychange', () => {
   if (document.hidden) {
     cancelAnimationFrame(window._particleRAF);
   } else {
     initParticles();
   }
 });
+}
 
+async function bootstrap() {
+  await loadSectionIncludes();
+  initTheme();
+  initNavbar();
+  initTypedText();
+  initScrollTop();
+  initScrollReveal();
+  renderSkills();
+  renderProjects();
+  renderExperience();
+  initContactForm();
+  initParticles();
+  initVisibilityPause();
+  initSmoothScroll();
+  initHeroReveal();
+}
 
-/* =====================================================================
-   11. SMOOTH SCROLL for anchor links (polyfill for older Safari)
-   ===================================================================== */
-$$('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', (e) => {
-    const targetId = anchor.getAttribute('href').slice(1);
-    const target   = document.getElementById(targetId);
-    if (!target) return;
-    e.preventDefault();
-    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  });
-});
-
-
-/* =====================================================================
-   12. HERO SECTION — initial animation trigger
-   ===================================================================== */
-window.addEventListener('load', () => {
-  $$('#hero .fade-up').forEach(el => {
-    // slight delay then reveal
-    setTimeout(() => el.classList.add('visible'), 100);
-  });
-});
+bootstrap();
