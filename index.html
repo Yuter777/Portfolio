@@ -1,104 +1,728 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Muhammad Yuter — Developer. Uzbekistan, Tashkent. Vibe coding with Cursor & Claude Code." />
-  <title>Muhammad Yuter · Developer</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Muhammad Yuter — Developer. Uzbekistan, Tashkent. Vibe coding with Cursor & Claude Code."
+    />
+    <title>Muhammad Yuter · Developer</title>
 
-  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+    <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Devicons for skill icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Devicons for skill icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Main stylesheet -->
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="antialiased">
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="antialiased">
+    <!-- ========== ANIMATED BACKGROUND ========== -->
+    <div class="bg-orbs" aria-hidden="true">
+      <span class="orb orb-1"></span>
+      <span class="orb orb-2"></span>
+      <span class="orb orb-3"></span>
+    </div>
+    <canvas id="particles-canvas" aria-hidden="true"></canvas>
 
-  
-  <!-- ========== ANIMATED BACKGROUND ========== -->
-  <div class="bg-orbs" aria-hidden="true">
-    <span class="orb orb-1"></span>
-    <span class="orb orb-2"></span>
-    <span class="orb orb-3"></span>
-  </div>
-  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+    <!-- ========== NAVBAR ========== -->
+    <header class="navbar" role="banner">
+      <nav class="nav-inner" aria-label="Primary navigation">
+        <!-- Logo -->
+        <a href="#hero" class="nav-logo" aria-label="Yuter – home">
+          <span class="logo-bracket">{</span>MY<span class="logo-bracket"
+            >}</span
+          >
+        </a>
 
-  <!-- ========== NAVBAR ========== -->
-  <header class="navbar" role="banner">
-    <nav class="nav-inner" aria-label="Primary navigation">
-      <!-- Logo -->
-      <a href="#hero" class="nav-logo" aria-label="Yuter – home">
-        <span class="logo-bracket">{</span>MY<span class="logo-bracket">}</span>
-      </a>
+        <!-- Desktop links -->
+        <ul class="nav-links" role="list">
+          <li>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-section="projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#experience" class="nav-link" data-section="experience"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-section="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
 
-      <!-- Desktop links -->
-      <ul class="nav-links" role="list">
-        <li><a href="#about"      class="nav-link" data-section="about">About</a></li>
-        <li><a href="#skills"     class="nav-link" data-section="skills">Skills</a></li>
-        <li><a href="#projects"   class="nav-link" data-section="projects">Projects</a></li>
-        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
-        <li><a href="#contact"    class="nav-link" data-section="contact">Contact</a></li>
-      </ul>
+        <!-- Right controls -->
+        <div class="nav-controls">
+          <!-- Dark / Light toggle -->
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark/light mode"
+            title="Toggle theme"
+          >
+            <span class="toggle-track">
+              <span class="toggle-thumb"></span>
+              <svg
+                class="icon-sun"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
+              <svg
+                class="icon-moon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </span>
+          </button>
 
-      <!-- Right controls -->
-      <div class="nav-controls">
-        <!-- Dark / Light toggle -->
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
-          <span class="toggle-track">
-            <span class="toggle-thumb"></span>
-            <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
-            <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          </span>
-        </button>
+          <!-- Mobile hamburger -->
+          <button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
 
-        <!-- Mobile hamburger -->
-        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-          <span></span><span></span><span></span>
-        </button>
+      <!-- Mobile menu -->
+      <div
+        class="mobile-menu"
+        id="mobileMenu"
+        role="dialog"
+        aria-label="Mobile navigation"
+        hidden
+      >
+        <ul role="list">
+          <li>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+          </li>
+          <li>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+          </li>
+          <li>
+            <a href="#projects" class="nav-link" data-section="projects"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="#experience" class="nav-link" data-section="experience"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-section="contact"
+              >Contact</a
+            >
+          </li>
+        </ul>
       </div>
-    </nav>
+    </header>
 
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation" hidden>
-      <ul role="list">
-        <li><a href="#about"      class="nav-link" data-section="about">About</a></li>
-        <li><a href="#skills"     class="nav-link" data-section="skills">Skills</a></li>
-        <li><a href="#projects"   class="nav-link" data-section="projects">Projects</a></li>
-        <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
-        <li><a href="#contact"    class="nav-link" data-section="contact">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+    <main class="relative z-10">
+      <section
+        id="hero"
+        class="hero-section relative z-[1] py-20 md:py-28 lg:py-36"
+        aria-label="Introduction"
+      >
+        <div class="hero-content fade-up">
+          <p class="hero-eyebrow">👋 Hello, I'm</p>
+          <h1 class="hero-name">
+            <span class="hero-name-first">Muhammad</span> Yuter
+          </h1>
+          <p class="hero-title">
+            <span class="typed-text" id="typedText" aria-live="polite"></span>
+            <span class="cursor" aria-hidden="true">|</span>
+          </p>
+          <p class="hero-desc">
+            I'm a <strong>developer</strong> (not a designer) with
+            <strong>~2 years of experience</strong> — including
+            <strong>1 year freelancing</strong> before joining Mars IT. I ship
+            real products with modern tools, vibe coding, and solid engineering
+            habits.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+          </div>
+          <div class="hero-stats glass">
+            <div class="stat"><strong>2+</strong><span>Years Exp.</span></div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat"><strong>1</strong><span>Yr Freelance</span></div>
+            <div class="stat-divider" aria-hidden="true"></div>
+            <div class="stat"><strong>Mars</strong><span>IT · 2025</span></div>
+          </div>
+        </div>
 
-  <main class="relative z-10">
-    <div data-include="sections/hero.html"></div>
-    <div data-include="sections/about.html"></div>
-    <div data-include="sections/skills.html"></div>
-    <div data-include="sections/projects.html"></div>
-    <div data-include="sections/experience.html"></div>
-    <div data-include="sections/contact.html"></div>
-  </main>
+        <div class="hero-visual fade-up delay-2" aria-hidden="true">
+          <div class="avatar-ring">
+            <div class="avatar-inner">
+              <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient
+                    id="avatarGrad"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop
+                      offset="0%"
+                      style="stop-color: var(--accent-primary)"
+                    />
+                    <stop
+                      offset="100%"
+                      style="stop-color: var(--accent-secondary)"
+                    />
+                  </linearGradient>
+                </defs>
+                <circle
+                  cx="100"
+                  cy="75"
+                  r="40"
+                  fill="url(#avatarGrad)"
+                  opacity=".9"
+                />
+                <ellipse
+                  cx="100"
+                  cy="155"
+                  rx="55"
+                  ry="35"
+                  fill="url(#avatarGrad)"
+                  opacity=".7"
+                />
+                <rect
+                  x="72"
+                  y="68"
+                  width="20"
+                  height="14"
+                  rx="5"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="2.5"
+                />
+                <rect
+                  x="108"
+                  y="68"
+                  width="20"
+                  height="14"
+                  rx="5"
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="2.5"
+                />
+                <line
+                  x1="92"
+                  y1="75"
+                  x2="108"
+                  y2="75"
+                  stroke="#fff"
+                  stroke-width="2.5"
+                />
+                <text
+                  x="85"
+                  y="148"
+                  font-size="16"
+                  fill="#fff"
+                  font-family="monospace"
+                  font-weight="bold"
+                >
+                  &lt;/&gt;
+                </text>
+              </svg>
+            </div>
+          </div>
+          <div class="float-badge badge-1 glass">⚡ Ships Fast</div>
+          <div class="float-badge badge-2 glass">💻 Code-first</div>
+          <div class="float-badge badge-3 glass">🛠️ Cursor &amp; Claude</div>
+        </div>
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="footer py-8" role="contentinfo">
-    <div class="mx-auto flex w-full max-w-[1200px] flex-col gap-1 px-4 text-center md:px-8 md:text-left">
-      <p>Built with ❤️ by <strong>Muhammad Yuter</strong> · Uzbekistan, Tashkent</p>
-      <p class="footer-note">Made with Vanilla JS · No frameworks harmed</p>
-    </div>
-  </footer>
+        <a
+          href="#about"
+          class="scroll-hint"
+          aria-label="Scroll to About section"
+        >
+          <span class="scroll-dot"></span>
+        </a>
+      </section>
+      <section
+        id="about"
+        class="about-section relative z-[1] py-20 md:py-28 lg:py-36"
+        aria-label="About me"
+      >
+        <div class="mx-auto w-full max-w-[1200px] px-4 md:px-8">
+          <div class="fade-up mb-14 text-center">
+            <p
+              class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-primary)]"
+            >
+              Who I Am
+            </p>
+            <h2
+              class="bg-gradient-to-br from-[var(--text-primary)] via-[var(--text-primary)] to-[var(--accent-secondary)] bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl"
+            >
+              About Me
+            </h2>
+          </div>
 
-  <!-- ========== SCROLL-TO-TOP ========== -->
-  <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top" title="Back to top" hidden>
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
+          <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
+            <div class="code-window glass fade-up" aria-hidden="true">
+              <div class="code-window-bar">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+                <span class="code-filename">about.js</span>
+              </div>
+              <pre
+                class="code-block"
+              ><code><span class="c-keyword">const</span> <span class="c-var">muhammad</span> = {
+      <span class="c-key">name</span>: <span class="c-string">"Muhammad Yuter"</span>,
+      <span class="c-key">role</span>: <span class="c-string">"Developer"</span>,
+      <span class="c-key">location</span>: <span class="c-string">"Tashkent, Uzbekistan"</span>,
+      <span class="c-key">designer</span>: <span class="c-bool">false</span>,
+      <span class="c-key">available</span>: <span class="c-bool">true</span>
+    };</code></pre>
+            </div>
 
-  <!-- Main script -->
-  <script src="script.js"></script>
-</body>
+            <div class="about-text fade-up delay-1">
+              <p>
+                I'm <strong>Muhammad Yuter</strong> — a
+                <strong>developer</strong>, with around
+                <strong>two years</strong> of practical experience.
+              </p>
+              <p>
+                I spent <strong>one year freelancing</strong> and then joined
+                <strong>Mars IT</strong> in Tashkent. I use GitHub actively and
+                focus on shipping clean, maintainable product code.
+              </p>
+              <p>
+                Based in <strong>Tashkent, Uzbekistan</strong>. Open to
+                meaningful collaboration and remote-friendly opportunities.
+              </p>
+
+              <div class="about-highlights">
+                <div class="highlight glass">
+                  <span class="hl-icon">💼</span>
+                  <div>
+                    <strong>Mars IT</strong><span>Mar 2025 — Dec 2025</span>
+                  </div>
+                </div>
+                <div class="highlight glass">
+                  <span class="hl-icon">📍</span>
+                  <div>
+                    <strong>Tashkent, Uzbekistan</strong
+                    ><span>Remote-friendly</span>
+                  </div>
+                </div>
+                <div class="highlight glass">
+                  <span class="hl-icon">📞</span>
+                  <div>
+                    <strong>+998 94 604 80 91</strong
+                    ><span>Call or message</span>
+                  </div>
+                </div>
+              </div>
+
+              <a href="#contact" class="btn btn-primary"
+                >Let's Work Together →</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="skills"
+        class="skills-section relative z-[1] py-20 md:py-28 lg:py-36"
+        aria-label="Skills"
+      >
+        <div class="mx-auto w-full max-w-[1200px] px-4 md:px-8">
+          <div class="fade-up mb-14 text-center">
+            <p
+              class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-primary)]"
+            >
+              What I Know
+            </p>
+            <h2
+              class="bg-gradient-to-br from-[var(--text-primary)] via-[var(--text-primary)] to-[var(--accent-secondary)] bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl"
+            >
+              Skills &amp; Tools
+            </h2>
+          </div>
+          <div
+            class="flex flex-col gap-12"
+            id="skillsContainer"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+      <section
+        id="projects"
+        class="projects-section relative z-[1] py-20 md:py-28 lg:py-36"
+        aria-label="Projects"
+      >
+        <div class="mx-auto w-full max-w-[1200px] px-4 md:px-8">
+          <div class="fade-up mb-14 text-center">
+            <p
+              class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-primary)]"
+            >
+              My Work
+            </p>
+            <h2
+              class="bg-gradient-to-br from-[var(--text-primary)] via-[var(--text-primary)] to-[var(--accent-secondary)] bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl"
+            >
+              Featured Projects
+            </h2>
+          </div>
+
+          <div
+            class="project-filters fade-up mb-10 flex flex-wrap justify-center gap-2"
+            role="group"
+            aria-label="Filter projects"
+          >
+            <button
+              class="filter-btn active rounded-full border border-[var(--glass-border)] bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] px-5 py-1.5 text-sm font-semibold text-white shadow-[0_4px_18px_var(--accent-glow)] transition"
+              data-filter="all"
+            >
+              All
+            </button>
+            <button
+              class="filter-btn rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] px-5 py-1.5 text-sm font-semibold text-[var(--text-secondary)] transition hover:bg-gradient-to-br hover:from-[var(--accent-primary)] hover:to-[var(--accent-secondary)] hover:text-white"
+              data-filter="web"
+            >
+              Web App
+            </button>
+            <button
+              class="filter-btn rounded-full border border-[var(--glass-border)] bg-[var(--glass-bg)] px-5 py-1.5 text-sm font-semibold text-[var(--text-secondary)] transition hover:bg-gradient-to-br hover:from-[var(--accent-primary)] hover:to-[var(--accent-secondary)] hover:text-white"
+              data-filter="tool"
+            >
+              Tool
+            </button>
+          </div>
+
+          <div
+            class="grid grid-cols-[repeat(auto-fill,minmax(340px,1fr))] gap-7 max-md:grid-cols-1"
+            id="projectsGrid"
+            aria-live="polite"
+          ></div>
+        </div>
+      </section>
+      <section
+        id="experience"
+        class="experience-section relative z-[1] py-20 md:py-28 lg:py-36"
+        aria-label="Experience"
+      >
+        <div class="mx-auto w-full max-w-[1200px] px-4 md:px-8">
+          <div class="fade-up mb-14 text-center">
+            <p
+              class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-primary)]"
+            >
+              My Journey
+            </p>
+            <h2
+              class="bg-gradient-to-br from-[var(--text-primary)] via-[var(--text-primary)] to-[var(--accent-secondary)] bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl"
+            >
+              Experience
+            </h2>
+          </div>
+          <div
+            class="relative mx-auto max-w-[800px] before:absolute before:bottom-0 before:left-5 before:top-0 before:w-0.5 before:rounded before:bg-gradient-to-b before:from-[var(--accent-primary)] before:via-[var(--accent-secondary)] before:to-transparent max-md:before:left-[14px]"
+            id="timeline"
+            aria-label="Career timeline"
+          ></div>
+        </div>
+      </section>
+      <section
+        id="contact"
+        class="contact-section relative z-[1] py-20 md:py-28 lg:py-36"
+        aria-label="Contact"
+      >
+        <div class="mx-auto w-full max-w-[1200px] px-4 md:px-8">
+          <div class="fade-up mb-14 text-center">
+            <p
+              class="mb-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-primary)]"
+            >
+              Say Hello
+            </p>
+            <h2
+              class="bg-gradient-to-br from-[var(--text-primary)] via-[var(--text-primary)] to-[var(--accent-secondary)] bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl"
+            >
+              Get In Touch
+            </h2>
+          </div>
+
+          <div
+            class="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.3fr]"
+          >
+            <div class="contact-info fade-up">
+              <p class="mb-8 text-base leading-8 text-[var(--text-secondary)]">
+                Have a project in mind, a question, or just want to say hi? My
+                inbox is always open.
+              </p>
+
+              <div class="mb-8 flex flex-col gap-3">
+                <a
+                  href="mailto:muhammad06tt@gmail.com"
+                  class="group flex items-center gap-4 rounded-[18px] px-4 py-3 transition hover:translate-x-1.5 glass"
+                >
+                  <span class="shrink-0 text-xl">✉️</span>
+                  <div>
+                    <strong class="block text-sm text-[var(--text-primary)]"
+                      >Email</strong
+                    ><span class="text-xs text-[var(--text-muted)]"
+                      >muhammad06tt@gmail.com</span
+                    >
+                  </div>
+                </a>
+                <a
+                  href="tel:+998946048091"
+                  class="group flex items-center gap-4 rounded-[18px] px-4 py-3 transition hover:translate-x-1.5 glass"
+                >
+                  <span class="shrink-0 text-xl">📞</span>
+                  <div>
+                    <strong class="block text-sm text-[var(--text-primary)]"
+                      >Phone</strong
+                    ><span class="text-xs text-[var(--text-muted)]"
+                      >+998 94 604 80 91</span
+                    >
+                  </div>
+                </a>
+                <div
+                  class="flex items-center gap-4 rounded-[18px] px-4 py-3 glass"
+                >
+                  <span class="shrink-0 text-xl">📍</span>
+                  <div>
+                    <strong class="block text-sm text-[var(--text-primary)]"
+                      >Location</strong
+                    ><span class="text-xs text-[var(--text-muted)]"
+                      >Tashkent, Uzbekistan</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap gap-3" aria-label="Social media links">
+                <a
+                  href="https://www.instagram.com/muhammad_yuter/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex h-11 w-11 items-center justify-center rounded-[10px] text-[var(--text-secondary)] transition hover:-translate-y-0.5 hover:text-[var(--accent-primary)] hover:shadow-[0_6px_20px_var(--accent-glow)] glass"
+                  aria-label="Instagram"
+                  >IN</a
+                >
+                <a
+                  href="https://t.me/muhammadyuter"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex h-11 w-11 items-center justify-center rounded-[10px] text-[var(--text-secondary)] transition hover:-translate-y-0.5 hover:text-[var(--accent-primary)] hover:shadow-[0_6px_20px_var(--accent-glow)] glass"
+                  aria-label="Telegram"
+                  >TG</a
+                >
+                <a
+                  href="https://www.linkedin.com/in/muhammad-tursunxoayev-a00a3a28a/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="flex h-11 w-11 items-center justify-center rounded-[10px] text-[var(--text-secondary)] transition hover:-translate-y-0.5 hover:text-[var(--accent-primary)] hover:shadow-[0_6px_20px_var(--accent-glow)] glass"
+                  aria-label="LinkedIn"
+                  >LN</a
+                >
+              </div>
+            </div>
+
+            <div class="contact-form-wrap fade-up delay-1">
+              <form
+                class="glass flex flex-col gap-5 rounded-[28px] p-8"
+                id="contactForm"
+                novalidate
+                aria-label="Contact form"
+              >
+                <div class="form-group flex flex-col gap-1.5">
+                  <label
+                    for="nameInput"
+                    class="text-[0.82rem] font-semibold tracking-[0.04em] text-[var(--text-secondary)]"
+                    >Full Name</label
+                  >
+                  <input
+                    class="w-full resize-y rounded-[10px] border border-[var(--input-border)] bg-[var(--input-bg)] px-4 py-3 text-[0.92rem] text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)] focus:shadow-[0_0_0_3px_var(--input-focus)]"
+                    type="text"
+                    id="nameInput"
+                    name="name"
+                    placeholder="John Doe"
+                    autocomplete="name"
+                    required
+                    aria-required="true"
+                  />
+                  <span
+                    class="min-h-4 text-xs text-[#ff4e6a]"
+                    aria-live="polite"
+                    id="nameError"
+                  ></span>
+                </div>
+                <div class="form-group flex flex-col gap-1.5">
+                  <label
+                    for="emailInput"
+                    class="text-[0.82rem] font-semibold tracking-[0.04em] text-[var(--text-secondary)]"
+                    >Email Address</label
+                  >
+                  <input
+                    class="w-full resize-y rounded-[10px] border border-[var(--input-border)] bg-[var(--input-bg)] px-4 py-3 text-[0.92rem] text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)] focus:shadow-[0_0_0_3px_var(--input-focus)]"
+                    type="email"
+                    id="emailInput"
+                    name="email"
+                    placeholder="john@example.com"
+                    autocomplete="email"
+                    required
+                    aria-required="true"
+                  />
+                  <span
+                    class="min-h-4 text-xs text-[#ff4e6a]"
+                    aria-live="polite"
+                    id="emailError"
+                  ></span>
+                </div>
+                <div class="form-group flex flex-col gap-1.5">
+                  <label
+                    for="subjectInput"
+                    class="text-[0.82rem] font-semibold tracking-[0.04em] text-[var(--text-secondary)]"
+                    >Subject</label
+                  >
+                  <input
+                    class="w-full resize-y rounded-[10px] border border-[var(--input-border)] bg-[var(--input-bg)] px-4 py-3 text-[0.92rem] text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)] focus:shadow-[0_0_0_3px_var(--input-focus)]"
+                    type="text"
+                    id="subjectInput"
+                    name="subject"
+                    placeholder="Project Inquiry"
+                    required
+                    aria-required="true"
+                  />
+                  <span
+                    class="min-h-4 text-xs text-[#ff4e6a]"
+                    aria-live="polite"
+                    id="subjectError"
+                  ></span>
+                </div>
+                <div class="form-group flex flex-col gap-1.5">
+                  <label
+                    for="messageInput"
+                    class="text-[0.82rem] font-semibold tracking-[0.04em] text-[var(--text-secondary)]"
+                    >Message</label
+                  >
+                  <textarea
+                    class="w-full resize-y rounded-[10px] border border-[var(--input-border)] bg-[var(--input-bg)] px-4 py-3 text-[0.92rem] text-[var(--text-primary)] outline-none transition placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)] focus:shadow-[0_0_0_3px_var(--input-focus)]"
+                    id="messageInput"
+                    name="message"
+                    rows="5"
+                    placeholder="Tell me about your project..."
+                    required
+                    aria-required="true"
+                  ></textarea>
+                  <span
+                    class="min-h-4 text-xs text-[#ff4e6a]"
+                    aria-live="polite"
+                    id="messageError"
+                  ></span>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-full"
+                  id="submitBtn"
+                >
+                  <span class="btn-text">Send Message ✨</span>
+                  <span class="btn-loading" hidden aria-hidden="true"
+                    >Sending...</span
+                  >
+                </button>
+                <div
+                  class="rounded-[18px] border border-[rgba(0,229,100,0.25)] bg-[rgba(0,229,100,0.12)] p-4 text-center text-sm font-semibold text-[#00e564]"
+                  id="formSuccess"
+                  hidden
+                  aria-live="polite"
+                  role="status"
+                >
+                  Message sent! I'll get back to you soon.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer py-8" role="contentinfo">
+      <div
+        class="mx-auto flex w-full max-w-[1200px] flex-col gap-1 px-4 text-center md:px-8 md:text-left"
+      >
+        <p>
+          Built with ❤️ by <strong>Muhammad Yuter</strong> · Uzbekistan,
+          Tashkent
+        </p>
+        <p class="footer-note">Made with Vanilla JS · No frameworks harmed</p>
+      </div>
+    </footer>
+
+    <!-- ========== SCROLL-TO-TOP ========== -->
+    <button
+      class="scroll-top-btn"
+      id="scrollTopBtn"
+      aria-label="Scroll to top"
+      title="Back to top"
+      hidden
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+        aria-hidden="true"
+      >
+        <polyline points="18 15 12 9 6 15" />
+      </svg>
+    </button>
+
+    <!-- Main script -->
+    <script src="script.js"></script>
+  </body>
 </html>
