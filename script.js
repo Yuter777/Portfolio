@@ -52,7 +52,7 @@ const SKILLS_DATA = [
   {
     category: "🛠️ Tools, CMS & Platforms",
     skills: [
-      { name: "ViteJS", icon: "devicon-vuejs-plain", level: 95 },
+      { name: "Vite", icon: "devicon-vuejs-plain", level: 95 },
       { name: "Git", icon: "devicon-git-plain colored", level: 88 },
       { name: "GitHub", icon: "devicon-github-original", level: 88 },
       { name: "VS Code", icon: "devicon-vscode-plain colored", level: 95 },
