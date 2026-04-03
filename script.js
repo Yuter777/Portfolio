@@ -59,7 +59,7 @@ const SKILLS_DATA = [
       { name: "Cursor", icon: "devicon-vscode-plain", level: 85 },
       { name: "Claude", icon: "devicon-vuejs-plain", level: 80 },
       { name: "Node.js", icon: "devicon-nodejs-plain colored", level: 65 },
-      // Added skills per instruction
+      { name: "AI Engineering", icon: "devicon-python-plain colored", level: 70 },
       { name: "Responsive & Mobile-First Design", icon: "devicon-css3-plain colored", level: 92 },
       { name: "Debugging & Troubleshooting", icon: "devicon-chrome-plain colored", level: 90 },
       { name: "Performance", icon: "devicon-chrome-plain", level: 85 },
