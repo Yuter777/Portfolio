@@ -15,8 +15,8 @@ const SKILLS_DATA = [
   {
     category: "🖥️ Frontend Core",
     skills: [
-      { name: "HTML5", icon: "devicon-html5-plain colored", level: 92 },
-      { name: "CSS3", icon: "devicon-css3-plain colored", level: 88 },
+      { name: "HTML5", icon: "devicon-html5-plain colored", level: 95 },
+      { name: "CSS3", icon: "devicon-css3-plain colored", level: 90 },
       {
         name: "JavaScript",
         icon: "devicon-javascript-plain colored",
@@ -59,6 +59,14 @@ const SKILLS_DATA = [
       { name: "Cursor", icon: "devicon-vscode-plain", level: 85 },
       { name: "Claude", icon: "devicon-vuejs-plain", level: 80 },
       { name: "Node.js", icon: "devicon-nodejs-plain colored", level: 65 },
+      // Added skills per instruction
+      { name: "Responsive & Mobile-First Design", icon: "devicon-css3-plain colored", level: 92 },
+      { name: "Debugging & Troubleshooting", icon: "devicon-chrome-plain colored", level: 90 },
+      { name: "Performance", icon: "devicon-chrome-plain", level: 85 },
+      { name: "Google Analytics (Basic Integration)", icon: "devicon-google-plain colored", level: 72 },
+      { name: "User Behavior Tracking", icon: "devicon-google-plain", level: 70 },
+      { name: "Chrome DevTools ", icon: "devicon-chrome-plain colored", level: 90 },
+      { name: "REST APIs", icon: "devicon-fastapi-plain colored", level: 85 },
     ],
   },
 ];
