@@ -18,9 +18,9 @@ A single-page, **vanilla** personal portfolio: responsive layout, dark/light the
 
 ## Tech stack
 
-| Layer   | Details                          |
-|--------|-----------------------------------|
-| Markup | Semantic HTML5                    |
+| Layer  | Details                            |
+| ------ | ---------------------------------- |
+| Markup | Semantic HTML5                     |
 | Style  | Custom CSS (variables, glass UI)   |
 | Logic  | ES modules–style strict vanilla JS |
 
