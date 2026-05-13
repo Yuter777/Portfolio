@@ -4,82 +4,47 @@ const SKILLS_DATA = [
   {
     category: "🖥️ Frontend Core",
     skills: [
-      { name: "HTML5", icon: "devicon-html5-plain colored", level: 95 },
-      { name: "CSS3", icon: "devicon-css3-plain colored", level: 90 },
-      {
-        name: "JavaScript",
-        icon: "devicon-javascript-plain colored",
-        level: 90,
-      },
-      {
-        name: "TypeScript",
-        icon: "devicon-typescript-plain colored",
-        level: 78,
-      },
+      { name: "HTML5", icon: "devicon:html5", level: 95 },
+      { name: "CSS3", icon: "devicon:css3", level: 90 },
+      { name: "JavaScript", icon: "devicon:javascript", level: 90 },
+      { name: "TypeScript", icon: "devicon:typescript", level: 78 },
     ],
   },
   {
     category: "⚛️ Frameworks & Libraries",
     skills: [
-      { name: "React", icon: "devicon-react-original colored", level: 85 },
-      { name: "Vue.js", icon: "devicon-vuejs-plain colored", level: 70 },
-      { name: "Next.js", icon: "devicon-nextjs-plain", level: 72 },
-      { name: "Nuxt.js", icon: "devicon-nuxtjs-plain colored", level: 65 },
-      { name: "Redux", icon: "devicon-redux-original colored", level: 75 },
-      { name: "Bootstrap", icon: "devicon-bootstrap-plain colored", level: 80 },
-      { name: "Sass/SCSS", icon: "devicon-sass-original colored", level: 82 },
-      { name: "Zustand", icon: "devicon-react-original", level: 70 },
-      { name: "Element Plus", icon: "devicon-vuejs-plain", level: 68 },
-      {
-        name: "Tailwind",
-        icon: "devicon-tailwindcss-plain colored",
-        level: 85,
-      },
+      { name: "React", icon: "devicon:react", level: 85 },
+      { name: "Vue.js", icon: "devicon:vuejs", level: 70 },
+      { name: "Next.js", icon: "devicon:nextjs", level: 72 },
+      { name: "Nuxt.js", icon: "devicon:nuxtjs", level: 65 },
+      { name: "Redux", icon: "devicon:redux", level: 75 },
+      { name: "Bootstrap", icon: "devicon:bootstrap", level: 80 },
+      { name: "Sass/SCSS", icon: "devicon:sass", level: 82 },
+      { name: "Zustand", icon: "devicon:zustand", level: 70 },
+      { name: "Element Plus", icon: "devicon:vuejs", level: 68 },
+      { name: "Tailwind", icon: "devicon:tailwindcss", level: 85 },
     ],
   },
   {
     category: "🛠️ Tools, CMS & Platforms",
     skills: [
-      { name: "Vite", icon: "devicon-vuejs-plain", level: 95 },
-      { name: "Git", icon: "devicon-git-plain colored", level: 88 },
-      { name: "GitHub", icon: "devicon-github-original", level: 88 },
-      { name: "VS Code", icon: "devicon-vscode-plain colored", level: 95 },
-      { name: "Cursor", icon: "devicon-vscode-plain", level: 85 },
-      { name: "Claude", icon: "devicon-vuejs-plain", level: 80 },
-      { name: "Node.js", icon: "devicon-nodejs-plain colored", level: 65 },
-      {
-        name: "AI Engineering",
-        icon: "devicon-python-plain colored",
-        level: 70,
-      },
-      { name: "Firebase", icon: "devicon-firebase-plain", level: 70 },
-      {
-        name: "Responsive & Mobile-First Design",
-        icon: "devicon-css3-plain colored",
-        level: 92,
-      },
-      {
-        name: "Debugging & Troubleshooting",
-        icon: "devicon-chrome-plain colored",
-        level: 90,
-      },
-      { name: "Performance", icon: "devicon-chrome-plain", level: 85 },
-      {
-        name: "Google Analytics (Basic Integration)",
-        icon: "devicon-google-plain colored",
-        level: 72,
-      },
-      {
-        name: "User Behavior Tracking",
-        icon: "devicon-google-plain",
-        level: 70,
-      },
-      {
-        name: "Chrome DevTools ",
-        icon: "devicon-chrome-plain colored",
-        level: 90,
-      },
-      { name: "REST APIs", icon: "devicon-fastapi-plain colored", level: 85 },
+      { name: "Vite", icon: "devicon:vitejs", level: 95 },
+      { name: "Git", icon: "devicon:git", level: 88 },
+      { name: "GitHub", icon: "devicon:github", level: 88 },
+      { name: "VS Code", icon: "devicon:vscode", level: 95 },
+      { name: "Cursor", icon: "simple-icons:cursor", level: 85 },
+      { name: "Claude", icon: "simple-icons:anthropic", level: 80 },
+      { name: "Node.js", icon: "devicon:nodejs", level: 65 },
+      { name: "AI Engineering", icon: "hugeicons:ai-brain-05", level: 70 },
+      { name: "Node.js", icon: "devicon:nodejs", level: 65 },
+      { name: "Claude", icon: "logos:claude-icon", level: 70 },
+      { name: "Firebase", icon: "devicon:firebase", level: 70 },
+      { name: "Responsive Design", icon: "material-symbols:devices", level: 92 },
+      { name: "Debugging", icon: "devicon:chrome", level: 90 },
+      { name: "Performance", icon: "material-symbols:speed", level: 85 },
+      { name: "Google Analytics", icon: "logos:google-analytics", level: 72 },
+      { name: "Chrome DevTools", icon: "devicon:chrome", level: 90 },
+      { name: "REST APIs", icon: "devicon:fastapi", level: 85 },
     ],
   },
 ];
@@ -461,7 +426,7 @@ function renderSkills() {
             .map(
               (skill) => `
             <div class="skill-card glass flex cursor-default flex-col items-center gap-3 rounded-[18px] px-4 py-5 transition duration-200 hover:-translate-y-1 hover:shadow-[0_12px_40px_var(--accent-glow)]" role="listitem" aria-label="${skill.name} — ${skill.level}% proficiency">
-              <i class="${skill.icon} skill-icon text-[2.4rem] transition duration-200" aria-hidden="true"></i>
+              <iconify-icon icon="${skill.icon}" class="skill-icon transition duration-200" width="38" height="38" aria-hidden="true"></iconify-icon>
               <span class="text-center text-xs font-semibold text-[var(--text-secondary)]">${skill.name}</span>
               <div class="h-1 w-full overflow-hidden rounded-full bg-[var(--glass-bg)]" role="progressbar" aria-valuenow="${skill.level}" aria-valuemin="0" aria-valuemax="100" aria-label="${skill.name} level">
                 <div class="skill-bar h-full w-0 rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] shadow-[0_0_8px_var(--accent-glow)] transition-[width] duration-[1200ms]" data-level="${skill.level}" style="width:0%"></div>
