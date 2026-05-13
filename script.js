@@ -90,13 +90,13 @@ const PROJECTS_DATA = [
     desc: "Mars IT CRM is the company’s core management and monitoring platform for students, employees, and project coordination.",
     images: [
       "images/MarsCore.png",
-      "images/MarsCore (2).png",
-      "images/MarsCore (3).png",
-      "images/MarsCore (4).png",
-      "images/MarsCore (5).png",
-      "images/MarsCore (6).png",
-      "images/MarsCore (7).png",
-      "images/MarsCore (8).png",
+      "images/MarsCore-2.png",
+      "images/MarsCore-3.png",
+      "images/MarsCore-4.png",
+      "images/MarsCore-5.png",
+      "images/MarsCore-6.png",
+      "images/MarsCore-7.png",
+      "images/MarsCore-8.png",
     ],
     gradient: "linear-gradient(135deg, #7557fa 0%, #6284ff 100%)",
     stack: [
@@ -144,7 +144,7 @@ const PROJECTS_DATA = [
   {
     title: "Qazo Namozi",
     desc: "An app to help Muslims track and make up missed prayers (qazo). Simple, clean interface for managing daily prayer schedules.",
-    image: "/images/Qazonamozi.png",
+    image: "images/Qazonamozi.png",
     gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
     stack: [
       "HTML",
@@ -167,7 +167,7 @@ const PROJECTS_DATA = [
   {
     title: "Which Flag Game",
     desc: "An interactive flag guessing game where players identify countries by their flags. A fun educational quiz built to test geography knowledge.",
-    image: "images/Flag game.png",
+    image: "images/Flag-game.png",
     gradient: "linear-gradient(135deg, #f7971e 0%, #ffd200 100%)",
     stack: ["HTML", "CSS", "JavaScript"],
     category: "web",

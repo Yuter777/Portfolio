@@ -1,3 +1,6 @@
 {
-  "framework": null
+  "framework": null,
+  "buildCommand": "node build-static.cjs",
+  "outputDirectory": "dist",
+  "installCommand": "npm install"
 }
