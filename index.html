@@ -9,52 +9,37 @@
     />
     <link rel="icon" href="images/logo.png" />
     <title>Muhammad Yuter · Developer</title>
-
-    <!-- Google Fonts: Syne (display) + DM Sans (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Devicons for skill icons -->
-    <!-- Devicon: Asosiy texnologiya ikonkalari uchun -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
     />
-    <!-- Remix Icon: Devicon'da topilmagan ikonkalarga fallback sifatida -->
-    <!-- https://remixicon.com/ -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
       rel="stylesheet"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="antialiased">
-    <!-- ========== ANIMATED BACKGROUND ========== -->
     <div class="bg-orbs" aria-hidden="true">
       <span class="orb orb-1"></span>
       <span class="orb orb-2"></span>
       <span class="orb orb-3"></span>
     </div>
     <canvas id="particles-canvas" aria-hidden="true"></canvas>
-
-    <!-- ========== NAVBAR ========== -->
     <header class="navbar" role="banner">
       <nav class="nav-inner" aria-label="Primary navigation">
-        <!-- Logo -->
         <a href="#hero" class="nav-logo" aria-label="Yuter – home">
           <span class="logo-bracket">{</span>MY<span class="logo-bracket"
             >}</span
           >
         </a>
-
-        <!-- Desktop links -->
         <ul class="nav-links" role="list">
           <li>
             <a href="#about" class="nav-link" data-section="about">About</a>
@@ -77,7 +62,6 @@
               >Contact</a
             >
           </li>
-          <!-- Resume Button -->
           <li>
             <a
               href="https://drive.google.com/file/d/1Uee0JjwVydP9poVG7Rzk8k75-lJLZJ2o/view?usp=sharing"
@@ -105,10 +89,7 @@
             </a>
           </li>
         </ul>
-
-        <!-- Right controls -->
         <div class="nav-controls">
-          <!-- Dark / Light toggle -->
           <button
             class="theme-toggle"
             id="themeToggle"
@@ -149,8 +130,6 @@
               </svg>
             </span>
           </button>
-
-          <!-- Mobile hamburger -->
           <button
             class="hamburger"
             id="hamburger"
@@ -162,8 +141,6 @@
           </button>
         </div>
       </nav>
-
-      <!-- Mobile menu -->
       <div
         class="mobile-menu"
         id="mobileMenu"
@@ -193,7 +170,6 @@
               >Contact</a
             >
           </li>
-          <!-- Resume Button Mobile -->
           <li>
             <a
               href="https://drive.google.com/file/d/1Uee0JjwVydP9poVG7Rzk8k75-lJLZJ2o/view?usp=sharing"
@@ -209,7 +185,6 @@
         </ul>
       </div>
     </header>
-
     <main class="relative z-10">
       <section
         id="hero"
@@ -271,7 +246,6 @@
             <div class="stat"><strong>Mars</strong><span>IT · 2025</span></div>
           </div>
         </div>
-
         <div class="hero-visual fade-up delay-2" aria-hidden="true">
           <div class="avatar-ring">
             <div class="avatar-inner">
@@ -354,7 +328,6 @@
           <div class="float-badge badge-2 glass">💻 Code-first</div>
           <div class="float-badge badge-3 glass">🛠️ Vibe coding</div>
         </div>
-
         <a
           href="#about"
           class="scroll-hint"
@@ -381,7 +354,6 @@
               About Me
             </h2>
           </div>
-
           <div class="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
             <div class="code-window glass fade-up" aria-hidden="true">
               <div class="code-window-bar">
@@ -399,7 +371,6 @@
       <span class="c-key">available</span>: <span class="c-bool">true</span>
     };</code></pre>
             </div>
-
             <div class="about-text fade-up delay-1">
               <p>
                 I'm <strong>Muhammad Yuter</strong> — a
@@ -415,8 +386,7 @@
                 Based in <strong>Tashkent, Uzbekistan</strong>. Open to
                 meaningful collaboration and remote-friendly opportunities.
               </p>
-              <!-- Resume link for About section, visually matches design -->
-                          <div class="about-highlights">
+              <div class="about-highlights">
                 <div class="highlight glass">
                   <span class="hl-icon">💼</span>
                   <div>
@@ -438,7 +408,6 @@
                   </div>
                 </div>
               </div>
-
               <a href="#contact" class="btn btn-primary"
                 >Let's Work Together →</a
               >
@@ -489,7 +458,6 @@
               Featured Projects
             </h2>
           </div>
-
           <div
             class="project-filters fade-up mb-10 flex flex-wrap justify-center gap-2"
             role="group"
@@ -514,7 +482,6 @@
               Tool
             </button>
           </div>
-
           <div
             class="grid grid-cols-[repeat(auto-fill,minmax(340px,1fr))] gap-7 max-md:grid-cols-1"
             id="projectsGrid"
@@ -565,7 +532,6 @@
               Get In Touch
             </h2>
           </div>
-
           <div
             class="grid grid-cols-1 items-start gap-12 lg:grid-cols-[1fr_1.3fr]"
           >
@@ -574,7 +540,6 @@
                 Have a project in mind, a question, or just want to say hi? My
                 inbox is always open.
               </p>
-
               <div class="mb-8 flex flex-col gap-3">
                 <a
                   href="mailto:muhammad06tt@gmail.com"
@@ -615,7 +580,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="flex flex-wrap gap-3" aria-label="Social media links">
                 <a
                   href="https://www.instagram.com/muhammad_yuter/"
@@ -676,7 +640,6 @@
                 </a>
               </div>
             </div>
-
             <div class="contact-form-wrap fade-up delay-1">
               <form
                 class="glass flex flex-col gap-5 rounded-[28px] p-8"
@@ -795,8 +758,6 @@
         </div>
       </section>
     </main>
-
-    <!-- ========== FOOTER ========== -->
     <footer class="footer py-8" role="contentinfo">
       <div
         class="mx-auto flex w-full max-w-[1200px] flex-col gap-1 px-4 text-center md:px-8 md:text-left"
@@ -808,8 +769,6 @@
         <p class="footer-note">Made with Vanilla JS · No frameworks harmed</p>
       </div>
     </footer>
-
-    <!-- ========== SCROLL-TO-TOP ========== -->
     <button
       class="scroll-top-btn"
       id="scrollTopBtn"
@@ -828,8 +787,6 @@
         <polyline points="18 15 12 9 6 15" />
       </svg>
     </button>
-
-    <!-- Main script -->
     <script src="script.js"></script>
   </body>
 </html>

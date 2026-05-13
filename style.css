@@ -1,32 +1,26 @@
 :root {
-  /* --- Accent colours (same in both themes) --- */
-  --accent-primary: #7c6bff; /* electric violet */
-  --accent-secondary: #00e5ff; /* cyan */
+  --accent-primary: #7c6bff;
+  --accent-secondary: #00e5ff;
   --accent-glow: rgba(124, 107, 255, 0.35);
   --accent-cyan-glow: rgba(0, 229, 255, 0.25);
 
-  /* --- Easing --- */
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
-  /* --- Typography --- */
   --font-display: "Syne", sans-serif;
   --font-body: "DM Sans", sans-serif;
 
-  /* --- Sizes --- */
   --nav-h: 72px;
   --radius-sm: 10px;
   --radius-md: 18px;
   --radius-lg: 28px;
   --radius-xl: 40px;
 
-  /* --- Transitions --- */
   --trans-fast: 0.18s var(--ease-smooth);
   --trans-mid: 0.35s var(--ease-smooth);
   --trans-slow: 0.55s var(--ease-smooth);
 }
 
-/* ============= DARK THEME (default) ============= */
 [data-theme="dark"] {
   --bg-base: #0a0a12;
   --bg-surface: #10101e;
@@ -50,8 +44,6 @@
 
   --code-bg: #0d0d1f;
 }
-
-/* ============= LIGHT THEME ============= */
 [data-theme="light"] {
   --bg-base: #f0f0f8;
   --bg-surface: #e8e8f4;
@@ -76,7 +68,6 @@
   --code-bg: #eeeef8;
 }
 
-/* ===================== RESET / BASE ===================== */
 *,
 *::before,
 *::after {
@@ -117,7 +108,6 @@ button {
   cursor: pointer;
 }
 
-/* ===================== TYPOGRAPHY ===================== */
 h1,
 h2,
 h3,
@@ -127,7 +117,6 @@ h4 {
   font-weight: 700;
 }
 
-/* ===================== GLASS UTILITY ===================== */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(24pxpx) saturate(180%);
@@ -140,7 +129,6 @@ h4 {
     box-shadow var(--trans-mid);
 }
 
-/* ===================== BACKGROUND ORBS ===================== */
 .bg-orbs {
   position: fixed;
   inset: 0;
@@ -203,7 +191,6 @@ h4 {
   opacity: 0.4;
 }
 
-/* ===================== NAVBAR ===================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -235,7 +222,6 @@ h4 {
   gap: 2rem;
 }
 
-/* Logo */
 .nav-logo {
   font-family: var(--font-display);
   font-size: 1.3rem;
@@ -256,7 +242,6 @@ h4 {
   opacity: 0.7;
 }
 
-/* Nav links */
 .nav-links {
   display: flex;
   gap: 0.25rem;
@@ -300,14 +285,12 @@ h4 {
   right: 10%;
 }
 
-/* Nav controls */
 .nav-controls {
   display: flex;
   align-items: center;
   gap: 0.75rem;
 }
 
-/* ---- Theme toggle ---- */
 .theme-toggle {
   background: none;
   border: none;
@@ -373,7 +356,6 @@ h4 {
   opacity: 1;
 }
 
-/* ---- Hamburger ---- */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -402,7 +384,6 @@ h4 {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* ---- Mobile menu ---- */
 .mobile-menu {
   position: absolute;
   top: var(--nav-h);
@@ -432,7 +413,6 @@ h4 {
   border-radius: var(--radius-sm);
 }
 
-/* ===================== BUTTONS ===================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -495,7 +475,6 @@ h4 {
   justify-content: center;
 }
 
-/* ===================== HERO ===================== */
 .hero-section {
   min-height: 100dvh;
   padding-top: calc(var(--nav-h) + 3rem);
@@ -628,7 +607,6 @@ h4 {
   background: var(--glass-border);
 }
 
-/* Hero visual */
 .hero-visual {
   position: relative;
   display: flex;
@@ -680,7 +658,6 @@ h4 {
   height: 75%;
 }
 
-/* Floating badges */
 .float-badge {
   position: absolute;
   padding: 0.45rem 0.9rem;
@@ -715,7 +692,6 @@ h4 {
   }
 }
 
-/* Scroll hint */
 .scroll-hint {
   position: absolute;
   bottom: 2.5rem;
@@ -747,8 +723,6 @@ h4 {
   }
 }
 
-/* ===================== ABOUT ===================== */
-/* Code window */
 .code-window {
   border-radius: var(--radius-md);
   overflow: hidden;
@@ -790,7 +764,6 @@ h4 {
   font-family: "Fira Code", "Cascadia Code", monospace;
 }
 
-/* Syntax colours */
 .c-keyword {
   color: #c792ea;
 }
@@ -829,7 +802,6 @@ h4 {
   color: #dc2626;
 }
 
-/* About text */
 .about-text p {
   color: var(--text-secondary);
   margin-bottom: 1.1rem;
@@ -869,12 +841,10 @@ h4 {
   color: var(--text-muted);
 }
 
-/* ===================== SKILLS / PROJECTS ===================== */
 .project-card.hidden {
   display: none;
 }
 
-/* ===================== FOOTER ===================== */
 .footer {
   position: relative;
   z-index: 1;
@@ -891,7 +861,6 @@ h4 {
   color: var(--text-muted);
 }
 
-/* ===================== SCROLL-TO-TOP ===================== */
 .scroll-top-btn {
   position: fixed;
   bottom: 2rem;
@@ -934,7 +903,6 @@ h4 {
   height: 20px;
 }
 
-/* ===================== ANIMATIONS ===================== */
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -957,7 +925,6 @@ h4 {
   transition-delay: 0.45s;
 }
 
-/* Stagger children inside a grid */
 .skills-grid .skill-card,
 .projects-grid .project-card,
 .timeline-item {
@@ -974,7 +941,6 @@ h4 {
   transform: translateY(0);
 }
 
-/* ===================== RESPONSIVE ===================== */
 @media (max-width: 900px) {
   .hero-section {
     grid-template-columns: 1fr;
@@ -991,7 +957,6 @@ h4 {
     margin-left: auto;
     margin-right: auto;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -1007,7 +972,8 @@ h4 {
   }
   .hamburger {
     display: flex;
-  }.nav-inner {
+  }
+  .nav-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1017,10 +983,8 @@ h4 {
   }
   .nav-logo {
     margin-right: auto;
-    /* logo chapda */
   }
 }
-
 
 @media (max-width: 480px) {
   .hero-stats {
@@ -1033,7 +997,6 @@ h4 {
   }
 }
 
-/* ===================== REDUCED MOTION ===================== */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
