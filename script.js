@@ -160,7 +160,7 @@ const PROJECTS_DATA = [
       "ElementPlus",
     ],
     category: "web",
-    liveUrl: null,
+    liveUrl: "https://qazo-namoz.vercel.app/",
     codeUrl: "https://github.com/Yuter777/Qazo-Namoz",
   },
 
