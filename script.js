@@ -142,7 +142,7 @@ const PROJECTS_DATA = [
     codeUrl: null,
   },
   {
-    title: "Qazo Namoz",
+    title: "Qazo Namozi",
     desc: "An app to help Muslims track and make up missed prayers (qazo). Simple, clean interface for managing daily prayer schedules.",
     image: "/images/Qazonamozi.png",
     gradient: "linear-gradient(135deg, #11998e 0%, #38ef7d 100%)",
